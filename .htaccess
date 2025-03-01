@@ -1,0 +1,5 @@
+<Directory "/sec/">
+    Options - Indexes
+    Order deny, allow
+    Deny from all 
+</Directory>
