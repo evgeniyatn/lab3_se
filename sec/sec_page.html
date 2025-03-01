@@ -14,7 +14,7 @@
   <meta name="author" content="" />
 
   <title>Edgecut</title>
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -32,25 +32,25 @@
 </head>
 
 <body>
-
+  <div id = "captcha" style = "position:absolute;" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lc4YuYqAAAAAL_jnBHeG6M-GaScQs7aOLrrnOx5"></div>
+  <div id = "secret_content">
   <div class="hero_area">
     <p>
 	Hello
     </p>
   </div>
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
-  </footer>
-  <!-- footer section -->
+  <script>
+        var content = document.getElementById('secret_content');
+        var recaptcha = document.getElementById('captcha');
 
+        content.style.display = 'none';
 
+        function recaptchaCallback() {
+            content.style.display = 'block';
+            recaptcha.style.display = 'none';
+        };
+  </script>
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
