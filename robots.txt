@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /sec/sec_page.html
+Disallow: /sec/
